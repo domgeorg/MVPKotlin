@@ -3,7 +3,7 @@ package gr.mobile.mvp.kotlin.mvp.interactor.base
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-class BaseInteractor : MvpInteractor {
+open class MvpInteractorImpl : MvpInteractor {
 
     private var compositeDisposable: CompositeDisposable? = null
 

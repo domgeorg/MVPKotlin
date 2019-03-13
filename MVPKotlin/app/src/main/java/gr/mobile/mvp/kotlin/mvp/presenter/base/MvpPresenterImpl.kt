@@ -4,7 +4,7 @@ import gr.mobile.mvp.kotlin.mvp.interactor.base.MvpInteractor
 import gr.mobile.mvp.kotlin.mvp.view.base.MvpView
 import java.lang.ref.WeakReference
 
-class BasePresenter<V : MvpView, I : MvpInteractor> : MvpPresenter<V, I> {
+open class MvpPresenterImpl<V : MvpView, I : MvpInteractor> : MvpPresenter<V, I> {
 
     private var viewRef: WeakReference<V>? = null
     private var interactor: I? = null
@@ -30,5 +30,4 @@ class BasePresenter<V : MvpView, I : MvpInteractor> : MvpPresenter<V, I> {
     override fun isViewAttached(): Boolean {
         return viewRef != null && viewRef!!.get() != null && viewRef!!.get()!!.isAttached()
     }
-
 }

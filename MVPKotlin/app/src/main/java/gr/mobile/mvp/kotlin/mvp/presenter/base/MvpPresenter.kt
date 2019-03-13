@@ -1,9 +1,6 @@
 package gr.mobile.mvp.kotlin.mvp.presenter.base
 
-import gr.mobile.mvp.kotlin.mvp.interactor.base.MvpInteractor
-import gr.mobile.mvp.kotlin.mvp.view.base.MvpView
-
-interface MvpPresenter<V : MvpView, I : MvpInteractor> {
+interface MvpPresenter<out V, out I> {
 
     fun detach()
 
