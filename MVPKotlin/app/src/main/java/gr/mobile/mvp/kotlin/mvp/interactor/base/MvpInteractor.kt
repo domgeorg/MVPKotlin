@@ -1,0 +1,10 @@
+package gr.mobile.mvp.kotlin.mvp.interactor.base
+
+interface MvpInteractor {
+
+    fun detach()
+
+    interface Callback<T> {
+        fun call(data: T)
+    }
+}

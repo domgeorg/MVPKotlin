@@ -5,16 +5,10 @@
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
-  <component name="ProjectDictionaryState">
-    <dictionary name="paris" />
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="UpsourceProjectSettings">
-    <option name="upsourceUrl" value="http://193.92.27.196:8080/" />
   </component>
 </project>

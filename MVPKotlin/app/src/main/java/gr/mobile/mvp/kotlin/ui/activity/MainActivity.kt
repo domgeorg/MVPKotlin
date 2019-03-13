@@ -1,7 +1,8 @@
-package gr.mobile.mvp.kotlin
+package gr.mobile.mvp.kotlin.ui.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import gr.mobile.mvp.kotlin.R
 
 class MainActivity : AppCompatActivity() {
 
