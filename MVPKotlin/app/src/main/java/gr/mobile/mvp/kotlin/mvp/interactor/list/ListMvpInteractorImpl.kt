@@ -7,11 +7,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
-class ListMvpInteractorImpl : MvpInteractorImpl, ListMvpInteractor {
+class ListMvpInteractorImpl : MvpInteractorImpl(), ListMvpInteractor {
 
     private val speakers: ArrayList<Speaker> = arrayListOf()
 
-    constructor() {
+    init {
         for (i in 1..100) {
             speakers.add(Speaker("name $i", "title $i", "description $i"))
         }
@@ -22,7 +22,7 @@ class ListMvpInteractorImpl : MvpInteractorImpl, ListMvpInteractor {
             subscriber.onNext(speakers)
             subscriber.onComplete()
         }
-            .delay(5, TimeUnit.SECONDS)
+            .delay(2, TimeUnit.SECONDS)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
