@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="no_data">No Data</string>
+    <string name="list_screen">List screen</string>
+    <string name="menu_screen">menu screen</string>
+    <string name="ask_for_permission">Ask For Permission</string>
+    <string name="permission_screen">Permission screen</string>
 </resources>
