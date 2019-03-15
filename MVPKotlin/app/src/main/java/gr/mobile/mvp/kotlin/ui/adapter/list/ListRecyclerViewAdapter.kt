@@ -1,14 +1,15 @@
 package gr.mobile.mvp.kotlin.ui.adapter.list
 
-import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import gr.mobile.mvp.kotlin.R
 import gr.mobile.mvp.kotlin.model.Speaker
+import kotlinx.android.synthetic.main.row_speaker.view.*
 
-class ListRecyclerViewAdapter(private var speakersList: ArrayList<Speaker>) :
+
+class ListRecyclerViewAdapter(private var speakersList: ArrayList<Speaker>, val listener: (Speaker) -> Unit) :
     RecyclerView.Adapter<ListRecyclerViewAdapter.SpeakerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpeakerViewHolder {
@@ -21,21 +22,15 @@ class ListRecyclerViewAdapter(private var speakersList: ArrayList<Speaker>) :
     }
 
     override fun onBindViewHolder(holder: SpeakerViewHolder, position: Int) {
-        val speaker = speakersList[position]
-        holder.nameTextView?.text = speaker.name
-        holder.titleTextView?.text = speaker.title
-        holder.descriptionTextView?.text = speaker.description
+        holder.bind(speakersList[position], listener)
     }
 
-    class SpeakerViewHolder(row: View) : RecyclerView.ViewHolder(row) {
-        var nameTextView: AppCompatTextView? = null
-        var titleTextView: AppCompatTextView? = null
-        var descriptionTextView: AppCompatTextView? = null
-
-        init {
-            nameTextView = row.findViewById(R.id.nameTextView)
-            titleTextView = row.findViewById(R.id.titleTextView)
-            descriptionTextView = row.findViewById(R.id.descriptionTextView)
+    class SpeakerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(speaker: Speaker, listener: (Speaker) -> Unit) {
+            itemView.nameTextView.text = speaker.name
+            itemView.titleTextView.text = speaker.title
+            itemView.descriptionTextView.text = speaker.description
+            itemView.setOnClickListener { listener(speaker) }
         }
     }
 }
