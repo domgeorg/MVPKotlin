@@ -5,4 +5,8 @@
     <string name="menu_screen">menu screen</string>
     <string name="ask_for_permission">Ask For Permission</string>
     <string name="permission_screen">Permission screen</string>
+    <string name="fragments_screen">Fragments screen</string>
+    <string name="fragment1">Fragment1</string>
+    <string name="fragment2">Fragment2</string>
+    <string name="fragment3">Fragment3</string>
 </resources>

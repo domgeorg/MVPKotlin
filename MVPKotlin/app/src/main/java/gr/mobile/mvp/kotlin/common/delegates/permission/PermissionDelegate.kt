@@ -1,18 +1,15 @@
 package gr.mobile.mvp.kotlin.common.delegates.permission
 
-import android.app.Activity
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AppCompatActivity
-import java.lang.ref.WeakReference
+import gr.mobile.mvp.kotlin.common.delegates.base.BaseDelegate
 
-class PermissionDelegate(activity: AppCompatActivity) {
+class PermissionDelegate(activity: AppCompatActivity) : BaseDelegate<AppCompatActivity>(activity) {
 
-    private var activityRef: WeakReference<AppCompatActivity>
-    private var permissionActions: ArrayList<PermissionAction>
+    private val permissionActions: ArrayList<PermissionAction>
 
     init {
-        activityRef = WeakReference(activity)
         permissionActions = arrayListOf()
     }
 
@@ -20,7 +17,7 @@ class PermissionDelegate(activity: AppCompatActivity) {
         if (!isAttached()) {
             return
         }
-        getActivity()?.let {
+        getReference()?.let {
             if (isPermissionGrantedForAction(permissionAction)) {
                 permissionAction.onPermissionGranted()
             } else {
@@ -52,16 +49,8 @@ class PermissionDelegate(activity: AppCompatActivity) {
         }
     }
 
-    private fun getActivity(): Activity? {
-        return activityRef.get()
-    }
-
-    private fun isAttached(): Boolean {
-        return activityRef.get() != null
-    }
-
     private fun isPermissionGrantedForAction(permissionAction: PermissionAction): Boolean {
-        getActivity()?.let {
+        getReference()?.let {
             for (permissionResult: String in permissionAction.getRequestedPermissions()) {
                 if (ActivityCompat.checkSelfPermission(it, permissionResult) != PackageManager.PERMISSION_GRANTED) {
                     return false
@@ -85,7 +74,7 @@ class PermissionDelegate(activity: AppCompatActivity) {
     }
 
     private fun shouldShowRequestPermissionRationale(permissionAction: PermissionAction): Boolean {
-        getActivity()?.let {
+        getReference()?.let {
             for (permission in permissionAction.getRequestedPermissions()) {
                 if (!ActivityCompat.shouldShowRequestPermissionRationale(it, permission)) {
                     return false

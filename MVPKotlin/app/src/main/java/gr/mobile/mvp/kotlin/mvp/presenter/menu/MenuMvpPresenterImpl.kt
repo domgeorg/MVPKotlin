@@ -15,4 +15,8 @@ class MenuMvpPresenterImpl : MvpPresenterImpl<MenuMvpView, EmptyMvpInteractor>, 
     override fun onPermissionClicked() {
         getView()?.goToPermissionScreen()
     }
+
+    override fun onFragmentClicked() {
+        getView()?.goToFragmentScreen()
+    }
 }

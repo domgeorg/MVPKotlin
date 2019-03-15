@@ -9,4 +9,6 @@ interface MenuMvpPresenter : MvpPresenter<MenuMvpView, EmptyMvpInteractor> {
     fun onListClicked()
 
     fun onPermissionClicked()
+
+    fun onFragmentClicked()
 }

@@ -26,6 +26,9 @@
         <activity
                 android:name=".ui.activity.permission.PermissionActivity"
                 android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.fragment.FragmentActivity"
+                android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

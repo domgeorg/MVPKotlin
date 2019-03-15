@@ -8,6 +8,7 @@ import gr.mobile.mvp.kotlin.mvp.presenter.menu.MenuMvpPresenter
 import gr.mobile.mvp.kotlin.mvp.presenter.menu.MenuMvpPresenterImpl
 import gr.mobile.mvp.kotlin.mvp.view.menu.MenuMvpView
 import gr.mobile.mvp.kotlin.ui.activity.base.BaseActivity
+import gr.mobile.mvp.kotlin.ui.activity.fragment.FragmentActivity
 import gr.mobile.mvp.kotlin.ui.activity.list.ListActivity
 import gr.mobile.mvp.kotlin.ui.activity.permission.PermissionActivity
 import kotlinx.android.synthetic.main.activity_menu.*
@@ -29,6 +30,10 @@ class MenuActivity : BaseActivity<MenuMvpPresenter>(), MenuMvpView {
         permissionButton.setOnClickListener {
             presenter?.onPermissionClicked()
         }
+
+        fragmentButton.setOnClickListener {
+            presenter?.onFragmentClicked()
+        }
     }
 
     override fun goToListScreen() {
@@ -37,5 +42,9 @@ class MenuActivity : BaseActivity<MenuMvpPresenter>(), MenuMvpView {
 
     override fun goToPermissionScreen() {
         startActivity(Intent(this, PermissionActivity::class.java))
+    }
+
+    override fun goToFragmentScreen() {
+        startActivity(Intent(this, FragmentActivity::class.java))
     }
 }
