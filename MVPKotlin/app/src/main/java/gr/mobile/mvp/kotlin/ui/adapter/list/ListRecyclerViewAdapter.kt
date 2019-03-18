@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import gr.mobile.mvp.kotlin.R
 import gr.mobile.mvp.kotlin.model.Speaker
-import kotlinx.android.synthetic.main.row_speaker.view.*
+import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.activity_speaker_details.*
 
 
 class ListRecyclerViewAdapter(private var speakersList: ArrayList<Speaker>, val listener: (Speaker) -> Unit) :
@@ -25,12 +26,13 @@ class ListRecyclerViewAdapter(private var speakersList: ArrayList<Speaker>, val 
         holder.bind(speakersList[position], listener)
     }
 
-    class SpeakerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class SpeakerViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView),
+    LayoutContainer {
         fun bind(speaker: Speaker, listener: (Speaker) -> Unit) {
-            itemView.nameTextView.text = speaker.name
-            itemView.titleTextView.text = speaker.title
-            itemView.descriptionTextView.text = speaker.description
-            itemView.setOnClickListener { listener(speaker) }
+            nameTextView.text = speaker.name
+            titleTextView.text = speaker.title
+            descriptionTextView.text = speaker.description
+            containerView.setOnClickListener { listener(speaker) }
         }
     }
 }

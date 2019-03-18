@@ -1,7 +1,6 @@
 package gr.mobile.mvp.kotlin.ui.activity.details
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.squareup.picasso.Picasso
 import gr.mobile.mvp.kotlin.R
 import gr.mobile.mvp.kotlin.model.SpeakerEvent
@@ -25,15 +24,15 @@ class DetailsActivity : BaseActivity<DetailsMvpPresenter>(), DetailsMvpView{
         initLayout()
     }
 
-    fun initLayout() {
+    private fun initLayout() {
 
     }
 
-    fun getPassData() {
+    private fun getPassData() {
         speakerEvent = intent.extras?.getParcelable("arg_speaker_event") as SpeakerEvent
     }
 
-    override fun showSpeakerDetails(speakerEvent: SpeakerEvent) {
+    override fun showSpeakerDetails() {
         nameTextView.text = speakerEvent.speaker.name
         titleTextView.text = speakerEvent.speaker.title
         descriptionTextView.text = speakerEvent.speaker.description
