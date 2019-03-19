@@ -10,5 +10,12 @@ class Definitions {
 
         //Fragment backstack values
         const val BACKSTACK_GLOBAL = "backstack_global"
+
+        const val DOMAIN = "https://www.ant1.com.cy/"
+
+        const val URL_LEAD = DOMAIN + "sys/MobileApp/ArticleLeads"
+        const val URL_CATEGORIES = DOMAIN + "sys/MobileApp/Categories";
+
+        const val CLIENT_TIMEOUT_IN_SECONDS: Long = 120
     }
 }

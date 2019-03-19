@@ -9,4 +9,6 @@ interface MenuMvpView : MvpView {
     fun goToPermissionScreen()
 
     fun goToFragmentScreen()
+
+    fun getCategories()
 }
