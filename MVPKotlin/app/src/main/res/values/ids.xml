@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- The id of the main fragment container view to support base activity and base fragment route fragment transaction operations -->
+    <!-- The id of the mainArticle fragment container view to support base activity and base fragment route fragment transaction operations -->
     <item name="fragmentContainer" type="id"/>
 </resources>

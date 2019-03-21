@@ -1,6 +1,5 @@
 package gr.mobile.mvp.kotlin.mvp.presenter.menu
 
-import gr.mobile.mvp.kotlin.mvp.interactor.empty.EmptyMvpInteractor
 import gr.mobile.mvp.kotlin.mvp.interactor.menu.MenuMvpInteractor
 import gr.mobile.mvp.kotlin.mvp.interactor.menu.MenuMvpInteractorImpl
 import gr.mobile.mvp.kotlin.mvp.presenter.base.MvpPresenterImpl
@@ -23,9 +22,14 @@ class MenuMvpPresenterImpl : MvpPresenterImpl<MenuMvpView, MenuMvpInteractor>, M
     }
 
     override fun getCategories() {
-
-        getInteractor()?.getCategories()
-
-        getView()?.getCategories()
+        if (!isViewAttached()) {
+            return
+        }
+        getInteractor()?.getCategories({
+            getView()?.showCategories(it)
+        }, {
+            getView()?.showError(it.localizedMessage)
+        }
+        )
     }
 }

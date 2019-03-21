@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/loadingView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             android:background="@color/white_translucent"
+             android:clickable="true"
+             android:focusable="true"
+             android:visibility="gone"
+             tools:visibility="gone">
+
+    <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/circleView"
+            android:layout_width="@dimen/common_forty_dp"
+            android:layout_height="@dimen/common_forty_dp"
+            android:layout_gravity="center"
+            CircleProgressView:cpv_barWidth="@dimen/common_four_dp"
+            CircleProgressView:cpv_innerContourSize="@dimen/common_zero_dp"
+            CircleProgressView:cpv_outerContourSize="@dimen/common_zero_dp"
+            CircleProgressView:cpv_rimColor="@color/gray_iron_light"
+            CircleProgressView:cpv_rimWidth="@dimen/common_four_dp"
+            CircleProgressView:cpv_showTextInSpinningMode="false"
+            CircleProgressView:cpv_showUnit="false"
+            CircleProgressView:cpv_spin="true"
+            CircleProgressView:cpv_spinBarLength="80"
+            CircleProgressView:cpv_spinColor="@color/colorAccent"
+            CircleProgressView:cpv_spinSpeed="4"
+            CircleProgressView:cpv_value="20"/>
+</FrameLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common Density-independent Pixels-->
+    <dimen name="common_zero_dp">0dp</dimen>
+    <dimen name="common_one_dp">1dp</dimen>
+    <dimen name="common_two_dp">2dp</dimen>
+    <dimen name="common_three_dp">3dp</dimen>
+    <dimen name="common_four_dp">4dp</dimen>
+    <dimen name="common_five_dp">5dp</dimen>
+    <dimen name="common_six_dp">6dp</dimen>
+    <dimen name="common_eight_dp">8dp</dimen>
+    <dimen name="common_ten_dp">10dp</dimen>
+    <dimen name="common_twelve_dp">12dp</dimen>
+    <dimen name="common_fourteen_dp">14dp</dimen>
+    <dimen name="common_sixteen_dp">16dp</dimen>
+    <dimen name="common_seventeen_dp">17dp</dimen>
+    <dimen name="common_eighteen_dp">18dp</dimen>
+    <dimen name="common_twenty_dp">20dp</dimen>
+    <dimen name="common_twenty_two_dp">22dp</dimen>
+    <dimen name="common_twenty_four_dp">24dp</dimen>
+    <dimen name="common_twenty_six_dp">26dp</dimen>
+    <dimen name="common_twenty_eight_dp">28dp</dimen>
+    <dimen name="common_thirty_dp">30dp</dimen>
+    <dimen name="common_thirty_two_dp">32dp</dimen>
+    <dimen name="common_thirty_four_dp">34dp</dimen>
+    <dimen name="common_thirty_six_dp">36dp</dimen>
+    <dimen name="common_thirty_eight_dp">38dp</dimen>
+    <dimen name="common_forty_dp">40dp</dimen>
+    <dimen name="common_forty_eight_dp">48dp</dimen>
+    <dimen name="common_fifty_dp">50dp</dimen>
+    <dimen name="common_fifty_four_dp">54dp</dimen>
+    <dimen name="common_fifty_six_dp">56dp</dimen>
+    <dimen name="common_sixty_dp">60dp</dimen>
+    <dimen name="common_seventy_dp">70dp</dimen>
+    <dimen name="common_seventy_two_dp">72dp</dimen>
+    <dimen name="common_seventy_six_dp">76dp</dimen>
+    <dimen name="common_eighty_dp">80dp</dimen>
+    <dimen name="common_ninety_dp">90dp</dimen>
+    <dimen name="common_one_hundred_dp">100dp</dimen>
+    <dimen name="common_one_hundred_fifty_dp">150dp</dimen>
+    <dimen name="common_two_hundred_dp">200dp</dimen>
+    <dimen name="common_minus_three">-3dp</dimen>
+    <dimen name="common_minus_ten">-10dp</dimen>
+
+    <!-- Common Text Scale-independent Pixels -->
+    <dimen name="common_text_twelve_sp">12sp</dimen>
+    <dimen name="common_text_fourteen_sp">14sp</dimen>
+    <dimen name="common_text_sixteen_sp">16sp</dimen>
+    <dimen name="common_text_eighteen_sp">18sp</dimen>
+    <dimen name="common_text_twenty_sp">20sp</dimen>
+    <dimen name="common_text_twenty_four_sp">24sp</dimen>
+    <dimen name="common_text_thirty_two_sp">32sp</dimen>
+    <dimen name="common_text_forty_two_sp">42sp</dimen>
+    <dimen name="common_text_fifty_two_sp">52sp</dimen>
+</resources>

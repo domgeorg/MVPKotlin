@@ -8,9 +8,10 @@ import gr.mobile.mvp.kotlin.mvp.presenter.menu.MenuMvpPresenter
 import gr.mobile.mvp.kotlin.mvp.presenter.menu.MenuMvpPresenterImpl
 import gr.mobile.mvp.kotlin.mvp.view.menu.MenuMvpView
 import gr.mobile.mvp.kotlin.network.client.Client
+import gr.mobile.mvp.kotlin.network.parser.response.categories.CategoriesResponse
+import gr.mobile.mvp.kotlin.ui.activity.articles.ArticlesActivity
 import gr.mobile.mvp.kotlin.ui.activity.base.BaseActivity
 import gr.mobile.mvp.kotlin.ui.activity.fragment.FragmentActivity
-import gr.mobile.mvp.kotlin.ui.activity.list.ListActivity
 import gr.mobile.mvp.kotlin.ui.activity.permission.PermissionActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 import timber.log.Timber
@@ -37,13 +38,13 @@ class MenuActivity : BaseActivity<MenuMvpPresenter>(), MenuMvpView {
             presenter?.onFragmentClicked()
         }
 
-        testRequest.setOnClickListener{
+        testRequest.setOnClickListener {
             presenter?.getCategories()
         }
     }
 
     override fun goToListScreen() {
-        startActivity(Intent(this, ListActivity::class.java))
+        startActivityModal(Intent(this, ArticlesActivity::class.java))
     }
 
     override fun goToPermissionScreen() {
@@ -54,7 +55,7 @@ class MenuActivity : BaseActivity<MenuMvpPresenter>(), MenuMvpView {
         startActivity(Intent(this, FragmentActivity::class.java))
     }
 
-    override fun getCategories() {
-        Timber.d("We have a response")
+    override fun showCategories(categories: CategoriesResponse) {
+        Timber.d("Number of Categories = %s", categories.categories.size)
     }
 }

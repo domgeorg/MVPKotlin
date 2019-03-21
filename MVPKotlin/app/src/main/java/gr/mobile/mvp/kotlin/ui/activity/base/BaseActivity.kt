@@ -1,6 +1,7 @@
 package gr.mobile.mvp.kotlin.ui.activity.base
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
@@ -12,17 +13,12 @@ import gr.mobile.mvp.kotlin.common.delegates.permission.PermissionDelegate
 import gr.mobile.mvp.kotlin.mvp.interactor.base.MvpInteractor
 import gr.mobile.mvp.kotlin.mvp.presenter.base.MvpPresenter
 import gr.mobile.mvp.kotlin.mvp.view.base.MvpView
-import gr.mobile.mvp.kotlin.network.client.Client
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_list.*
 
 @SuppressLint("Registered")
 open class BaseActivity<T : MvpPresenter<MvpView, MvpInteractor>> : AppCompatActivity(), MvpView {
 
     protected var presenter: T? = null
-
-    lateinit var compositeDisposable: CompositeDisposable
 
     val permissionDelegate: PermissionDelegate by lazy {
         return@lazy PermissionDelegate(this)
@@ -33,17 +29,6 @@ open class BaseActivity<T : MvpPresenter<MvpView, MvpInteractor>> : AppCompatAct
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        compositeDisposable.dispose()
-        compositeDisposable.clear()
-    }
-
-    protected fun makeRequest(disposable: Disposable?) {
-        disposable?.let { compositeDisposable.add(it) }
     }
 
     override fun isAttached(): Boolean {
@@ -80,4 +65,42 @@ open class BaseActivity<T : MvpPresenter<MvpView, MvpInteractor>> : AppCompatAct
     override fun showGenericError() {
         Toast.makeText(this, "Oupsies! Something went wrong", Toast.LENGTH_SHORT).show()
     }
+
+    fun startActivityModal(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(R.anim.anim_slide_up, R.anim.anim_zoom_out)
+    }
+
+    fun startActivityModal(intent: Intent, bundle: Bundle?) {
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivity(intent)
+        overridePendingTransition(R.anim.anim_slide_up, R.anim.anim_zoom_out)
+    }
+
+    fun startActivityForResultModal(intent: Intent, code: Int, bundle: Bundle?) {
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivityForResult(intent, code)
+        overridePendingTransition(R.anim.anim_slide_up, R.anim.anim_zoom_out)
+    }
+
+    fun startActivityAsSlide(intent: Intent, bundle: Bundle?) {
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivity(intent)
+        overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left)
+    }
+
+    fun startActivityForResultAsSlide(intent: Intent, code: Int, bundle: Bundle?) {
+        if (bundle != null) {
+            intent.putExtras(bundle)
+        }
+        startActivityForResult(intent, code)
+        overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left)
+    }
+
 }

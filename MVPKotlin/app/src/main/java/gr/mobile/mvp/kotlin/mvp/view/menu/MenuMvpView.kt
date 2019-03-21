@@ -1,6 +1,7 @@
 package gr.mobile.mvp.kotlin.mvp.view.menu
 
 import gr.mobile.mvp.kotlin.mvp.view.base.MvpView
+import gr.mobile.mvp.kotlin.network.parser.response.categories.CategoriesResponse
 
 interface MenuMvpView : MvpView {
 
@@ -10,5 +11,5 @@ interface MenuMvpView : MvpView {
 
     fun goToFragmentScreen()
 
-    fun getCategories()
+    fun showCategories(categories: CategoriesResponse)
 }

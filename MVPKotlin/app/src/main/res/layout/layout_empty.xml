@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/emptyView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/white"
+             android:clickable="true"
+             android:focusable="true"
+             android:visibility="gone">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/common_thirty_dp">
+
+        <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/cautionImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/common_sixteen_dp"
+                android:src="@drawable/ic_error_outline_accent_24dp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/emptyTextView"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cautionImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/common_fifty_dp"
+                android:layout_marginEnd="@dimen/common_fifty_dp"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="No data"
+                android:textSize="@dimen/common_text_sixteen_sp"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/common_four_dp"
+            android:layout_margin="@dimen/common_eight_dp"
+            app:cardCornerRadius="@dimen/common_four_dp">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:padding="@dimen/common_sixteen_dp"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/photoImageView"
+                    android:layout_width="@dimen/common_one_hundred_dp"
+                    android:layout_height="@dimen/common_one_hundred_dp"
+                    android:layout_marginEnd="@dimen/common_sixteen_dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_toEndOf="@+id/photoImageView"
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textSize="@dimen/common_text_sixteen_sp"
+                    android:textStyle="bold"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/subtitleTextView"
+                    android:layout_toEndOf="@+id/photoImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/titleTextView"
+                    android:layout_marginTop="@dimen/common_sixteen_dp"
+                    android:ellipsize="end"
+                    android:lines="3"
+                    android:textSize="@dimen/common_text_sixteen_sp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

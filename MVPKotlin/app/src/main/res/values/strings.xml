@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Kotlin Playground</string>
     <string name="no_data">No Data</string>
     <string name="list_screen">List screen</string>
     <string name="menu_screen">menu screen</string>

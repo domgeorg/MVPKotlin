@@ -7,12 +7,12 @@ open class MvpInteractorImpl : MvpInteractor {
 
     private var compositeDisposable: CompositeDisposable? = null
 
-    constructor() {
+    init {
         compositeDisposable = CompositeDisposable()
     }
 
-    fun makeRequest(disposable: Disposable) {
-        compositeDisposable?.add(disposable)
+    fun makeRequest(disposable: Disposable?) {
+        disposable?.let { compositeDisposable?.add(it) }
     }
 
     override fun detach() {
