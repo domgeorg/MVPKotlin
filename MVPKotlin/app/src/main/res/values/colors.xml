@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4a148c</color>
-    <color name="colorPrimaryDark">#12005e</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#5042ae</color>
+    <color name="colorPrimaryDark">#131a7e</color>
+    <color name="colorAccent">#f48921</color>
     <color name="white_translucent">#CCFFFFFF</color>
     <color name="gray_concrete">#F2F2F2</color>
     <color name="gray_iron_light">#E9E9EA</color>
+    <color name="gray_oslo_gray">#8A8C90</color>
+    <!-- Black -->
+    <color name="black">#000000</color>
+    <color name="black_russian">#00000A</color>
+    <color name="black_thunder">#231F20</color>
+    <color name="black_thunder_translucent">#1A231F20</color>
+    <color name="black_mine_shafe">#353535</color>
+    <color name="black_tundora_2">#3F3B3C</color>
+    <color name="black_light">#FF4A4A4A</color>
 </resources>

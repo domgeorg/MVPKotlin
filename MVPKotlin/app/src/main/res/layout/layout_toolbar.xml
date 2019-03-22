@@ -28,6 +28,9 @@
         <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/titleToolbarTextView"
                 android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/backImageView"
+                android:layout_toStartOf="@+id/closeImageView"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textColor="@android:color/white"

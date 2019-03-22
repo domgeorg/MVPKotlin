@@ -37,6 +37,9 @@
     <dimen name="common_eighty_dp">80dp</dimen>
     <dimen name="common_ninety_dp">90dp</dimen>
     <dimen name="common_one_hundred_dp">100dp</dimen>
+    <dimen name="common_one_hundred_ten_dp">110dp</dimen>
+    <dimen name="common_one_hundred_twenty_dp">120dp</dimen>
+    <dimen name="common_one_hundred_thirty_dp">130dp</dimen>
     <dimen name="common_one_hundred_fifty_dp">150dp</dimen>
     <dimen name="common_two_hundred_dp">200dp</dimen>
     <dimen name="common_minus_three">-3dp</dimen>

@@ -6,5 +6,5 @@ import gr.mobile.mvp.kotlin.mvp.view.articles.ArticlesMvpView
 
 interface ArticlesMvpPresenter : MvpPresenter<ArticlesMvpView, ArticlesMvpInteractor> {
 
-    fun getMainArticles()
+    fun getArticles()
 }

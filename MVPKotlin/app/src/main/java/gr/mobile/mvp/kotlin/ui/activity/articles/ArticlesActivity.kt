@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import gr.mobile.mvp.kotlin.R
+import gr.mobile.mvp.kotlin.model.article.ArticleWrapper
 import gr.mobile.mvp.kotlin.mvp.interactor.articles.ArticlesMvpInteractorImpl
 import gr.mobile.mvp.kotlin.mvp.presenter.articles.ArticlesMvpPresenter
 import gr.mobile.mvp.kotlin.mvp.presenter.articles.ArticlesMvpPresenterImpl
 import gr.mobile.mvp.kotlin.mvp.view.articles.ArticlesMvpView
 import gr.mobile.mvp.kotlin.network.client.Client
-import gr.mobile.mvp.kotlin.network.parser.response.articleLeads.Article
 import gr.mobile.mvp.kotlin.ui.activity.base.BaseActivity
 import gr.mobile.mvp.kotlin.ui.adapter.articles.ArticlesRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_articles.*
@@ -24,7 +24,7 @@ class ArticlesActivity : BaseActivity<ArticlesMvpPresenter>(), ArticlesMvpView {
         setContentView(R.layout.activity_articles)
         presenter = ArticlesMvpPresenterImpl(this, ArticlesMvpInteractorImpl(Client().createApi()))
         initLayout()
-        presenter?.getMainArticles()
+        presenter?.getArticles()
     }
 
     override fun showLoading() {
@@ -48,15 +48,15 @@ class ArticlesActivity : BaseActivity<ArticlesMvpPresenter>(), ArticlesMvpView {
         showEmpty()
     }
 
-    override fun showMainArticles(sportArticles: List<Article>) {
+    override fun showArticles(articles: List<ArticleWrapper>) {
         loadingView.visibility = View.GONE
         emptyView.visibility = View.GONE
         articlesRecyclerView.layoutManager = LinearLayoutManager(this)
-        articlesRecyclerView.adapter = ArticlesRecyclerViewAdapter(sportArticles)
+        articlesRecyclerView.adapter = ArticlesRecyclerViewAdapter(articles)
     }
 
     private fun initLayout() {
-        titleToolbarTextView.text = "Main Articles"
+        titleToolbarTextView.text = "Articles"
         backImageView.setOnClickListener {
             finish()
             overridePendingTransition(0, R.anim.anim_slide_down)

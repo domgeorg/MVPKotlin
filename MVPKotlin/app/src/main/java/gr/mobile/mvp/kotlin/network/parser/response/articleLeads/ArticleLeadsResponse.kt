@@ -1,20 +1,15 @@
 package gr.mobile.mvp.kotlin.network.parser.response.articleLeads
 
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class ArticleLeadsResponse(
-    @SerializedName("carousel")
-     var carousel: List<Article>?=null,
+     val carousel: List<Article>?=null,
 
-    @SerializedName("life")
-    var life: List<Article>?=null,
+    val life: List<Article>?=null,
 
-    @SerializedName("main")
-    var main: List<Article>?=null,
+    val main: List<Article>?=null,
 
-    @SerializedName("sports")
-   var sports: List<Article>?=null
+   val sports: List<Article>?=null
 ) : Parcelable

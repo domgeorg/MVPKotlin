@@ -1,9 +1,9 @@
 package gr.mobile.mvp.kotlin.mvp.interactor.articles
 
 import gr.mobile.mvp.kotlin.mvp.interactor.base.MvpInteractor
-import gr.mobile.mvp.kotlin.network.parser.response.articleLeads.Article
+import gr.mobile.mvp.kotlin.network.parser.response.articleLeads.ArticleLeadsResponse
 
 interface ArticlesMvpInteractor : MvpInteractor {
 
-    fun getMainArticles(successCallback: (List<Article>) -> Unit, errorCallback: (Throwable) -> Unit)
+    fun getArticles(successCallback: (ArticleLeadsResponse) -> Unit, errorCallback: (Throwable) -> Unit)
 }

@@ -14,8 +14,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.menu.MenuActivity"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".ui.activity.splash.SplashActivity"
+                android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -30,6 +31,9 @@
                   android:screenOrientation="portrait"/>
         <activity
                 android:name=".ui.activity.permission.PermissionActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".ui.activity.menu.MenuActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".ui.activity.fragment.FragmentActivity"
