@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/common_twenty_four_dp">
+            
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/photoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_two_hundred_dp"
+                android:layout_gravity="center"
+                android:transitionName="@string/transition_article_photo" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_sixteen_dp"
+                android:orientation="vertical">
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_sixteen_dp"
+                    android:layout_marginBottom="@dimen/common_fourteen_dp">
+                    
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/categoryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/common_six_dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/common_text_sixteen_sp"
+                        android:textStyle="bold" />
+                    
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/dateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/categoryTextView"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/common_text_sixteen_sp"
+                        android:textStyle="bold" />
+                
+                </RelativeLayout>
+                
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_thunder"
+                    android:textSize="@dimen/common_text_twenty_four_sp"
+                    android:textStyle="bold"
+                    android:transitionName="@string/transition_article_title" />
+                
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/subtitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_fourteen_dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_thunder"
+                    android:textSize="@dimen/common_text_eighteen_sp"
+                    android:textStyle="bold"
+                    android:transitionName="@string/transition_article_subtitle" />
+                
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/contentTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_fourteen_dp"
+                    android:autoLink="web"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_tundora_2"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="@dimen/common_text_eighteen_sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

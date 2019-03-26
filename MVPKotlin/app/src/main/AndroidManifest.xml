@@ -25,9 +25,9 @@
         <activity
                 android:name=".ui.activity.list.ListActivity"
                 android:screenOrientation="portrait"/>
-
         <activity android:name=".ui.activity.details.DetailsActivity"
-                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.articleDetails.ArticleDetailsActivity"
                   android:screenOrientation="portrait"/>
         <activity
                 android:name=".ui.activity.permission.PermissionActivity"

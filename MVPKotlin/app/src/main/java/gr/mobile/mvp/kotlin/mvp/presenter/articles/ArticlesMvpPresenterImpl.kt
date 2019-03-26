@@ -23,7 +23,7 @@ class ArticlesMvpPresenterImpl(
                 val header = ArticleWrapper(null, true, "Carousel", articleList.isEmpty(), false)
                 articleList.add(header)
                 for (i in articleLeadsResponse.carousel.indices) {
-                    val article = ArticleWrapper(articleLeadsResponse.carousel[i], false, "", false, false)
+                    val article = ArticleWrapper(articleLeadsResponse.carousel[i], false, "Carousel", false, false)
                     articleList.add(article)
                 }
             }
@@ -32,7 +32,7 @@ class ArticlesMvpPresenterImpl(
                 val header = ArticleWrapper(null, true, "Main", articleList.isEmpty(), false)
                 articleList.add(header)
                 for (i in articleLeadsResponse.main.indices) {
-                    val article = ArticleWrapper(articleLeadsResponse.main[i], false, "", false, false)
+                    val article = ArticleWrapper(articleLeadsResponse.main[i], false, "Main", false, false)
                     articleList.add(article)
                 }
             }
@@ -41,7 +41,7 @@ class ArticlesMvpPresenterImpl(
                 val header = ArticleWrapper(null, true, "Sports", articleList.isEmpty(), false)
                 articleList.add(header)
                 for (i in articleLeadsResponse.sports.indices) {
-                    val article = ArticleWrapper(articleLeadsResponse.sports[i], false, "", false, false)
+                    val article = ArticleWrapper(articleLeadsResponse.sports[i], false, "Sports", false, false)
                     articleList.add(article)
                 }
             }
@@ -50,7 +50,7 @@ class ArticlesMvpPresenterImpl(
                 val header = ArticleWrapper(null, true, "Life", articleList.isEmpty(), false)
                 articleList.add(header)
                 for (i in articleLeadsResponse.life.indices) {
-                    val article = ArticleWrapper(articleLeadsResponse.life[i], false, "", false, false)
+                    val article = ArticleWrapper(articleLeadsResponse.life[i], false, "Life", false, false)
                     articleList.add(article)
                 }
 

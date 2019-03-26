@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Kotlin Playground</string>
+    <string name="article_details_bundle">article details bundle</string>
     <string name="no_data">No Data</string>
     <string name="list_screen">List screen</string>
     <string name="menu_screen">menu screen</string>
@@ -9,4 +10,8 @@
     <string name="fragment1">Fragment1</string>
     <string name="fragment2">Fragment2</string>
     <string name="fragment3">Fragment3</string>
+    <string name="transition_article_photo">transition_article_photo</string>
+    <string name="transition_article_title">transition_article_title</string>
+    <string name="transition_article_subtitle">transition_article_subtitle</string>
+    <string name="articles">Articles</string>
 </resources>

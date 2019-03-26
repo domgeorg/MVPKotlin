@@ -17,5 +17,7 @@ class Definitions {
         const val URL_CATEGORIES = DOMAIN + "sys/MobileApp/Categories";
 
         const val CLIENT_TIMEOUT_IN_SECONDS: Long = 120
+
+        const val ARTICLE_DETAILS_DATE = "dd-MM-yyyy HH:mm"
     }
 }
