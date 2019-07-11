@@ -10,10 +10,7 @@ import com.squareup.picasso.Picasso
 import gr.mobile.mvp.kotlin.R
 import gr.mobile.mvp.kotlin.model.article.ArticleWrapper
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.activity_article_details.*
 import kotlinx.android.synthetic.main.row_article.*
-import kotlinx.android.synthetic.main.row_article.subtitleTextView
-import kotlinx.android.synthetic.main.row_article.titleTextView
 
 class ArticlesRecyclerViewAdapter(
     private val articles: List<ArticleWrapper>,
@@ -45,7 +42,7 @@ class ArticlesRecyclerViewAdapter(
             containerView.setOnClickListener {
                 onArticleClick(
                     articleWrapper,
-                    articlePhotoImageView,
+                    photoImageView,
                     titleTextView,
                     subtitleTextView
                 )

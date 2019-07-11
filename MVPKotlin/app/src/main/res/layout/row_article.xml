@@ -31,7 +31,7 @@
                 android:padding="@dimen/common_sixteen_dp">
 
             <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/articlePhotoImageView"
+                    android:id="@+id/photoImageView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/common_sixteen_dp"
