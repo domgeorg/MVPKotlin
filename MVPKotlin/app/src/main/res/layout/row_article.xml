@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/headerTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_twenty_dp"
-        android:layout_marginTop="@dimen/common_twenty_dp"
-        android:layout_marginBottom="@dimen/common_eight_dp"
-        android:textColor="@color/black_light"
-        android:textSize="@dimen/common_text_fourteen_sp"
-        android:textStyle="bold" />
-    
+            android:id="@+id/headerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_twenty_dp"
+            android:layout_marginTop="@dimen/common_twenty_dp"
+            android:layout_marginBottom="@dimen/common_eight_dp"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/common_text_fourteen_sp"
+            android:textStyle="bold"/>
+
     <android.support.v7.widget.CardView
-        android:id="@+id/articleCardView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/common_one_hundred_thirty_dp"
-        android:layout_margin="@dimen/common_eight_dp"
-        android:elevation="@dimen/common_four_dp"
-        app:cardCornerRadius="@dimen/common_four_dp">
-        
-        <LinearLayout
+            android:id="@+id/articleCardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="@dimen/common_sixteen_dp">
-            
-            <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/photoImageView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/common_sixteen_dp"
-                android:layout_weight="1.1"
-                android:maxHeight="@dimen/common_one_hundred_thirty_dp"
-                android:transitionName="@string/transition_article_photo" />
-            
-            <LinearLayout
-                android:layout_width="0dp"
+            android:layout_height="@dimen/common_one_hundred_thirty_dp"
+            android:layout_margin="@dimen/common_eight_dp"
+            android:elevation="@dimen/common_four_dp"
+            app:cardCornerRadius="@dimen/common_four_dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.8"
-                android:orientation="vertical">
-                
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/titleTextView"
-                    android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_sixteen_dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/articlePhotoImageView"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:maxLines="2"
-                    android:textColor="@color/black_thunder"
-                    android:textSize="@dimen/common_text_sixteen_sp"
-                    android:textStyle="bold"
-                    android:transitionName="@string/transition_article_title" />
-                
+                    android:layout_marginEnd="@dimen/common_sixteen_dp"
+                    android:layout_weight="1.1"
+                    android:layout_gravity="center"
+                    android:maxHeight="@dimen/common_one_hundred_thirty_dp"
+                    android:transitionName="@string/transition_article_photo"/>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:orientation="vertical">
+
                 <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/subtitleTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/common_sixteen_dp"
-                    android:ellipsize="end"
-                    android:gravity="center_vertical"
-                    android:maxLines="3"
-                    android:textColor="@color/black_tundora_2"
-                    android:textSize="@dimen/common_text_sixteen_sp"
-                    android:transitionName="@string/transition_article_subtitle" />
+                        android:id="@+id/titleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/black_thunder"
+                        android:textSize="@dimen/common_text_sixteen_sp"
+                        android:textStyle="bold"
+                        android:transitionName="@string/transition_article_title"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/subtitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_sixteen_dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="3"
+                        android:textColor="@color/black_tundora_2"
+                        android:textSize="@dimen/common_text_sixteen_sp"
+                        android:transitionName="@string/transition_article_subtitle"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
-    
+
     <Space
-        android:id="@+id/bottomSpace"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/common_twenty_dp" />
+            android:id="@+id/bottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_twenty_dp"/>
 </LinearLayout>

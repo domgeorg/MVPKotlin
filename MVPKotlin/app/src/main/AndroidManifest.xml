@@ -22,22 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name=".ui.activity.list.ListActivity"
-                android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.details.DetailsActivity"
-                  android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.articleDetails.ArticleDetailsActivity"
                   android:screenOrientation="portrait"/>
-        <activity
-                android:name=".ui.activity.permission.PermissionActivity"
-                android:screenOrientation="portrait"/>
-        <activity
-                android:name=".ui.activity.menu.MenuActivity"
-                android:screenOrientation="portrait"/>
-        <activity
-                android:name=".ui.activity.fragment.FragmentActivity"
-                android:screenOrientation="portrait"/>
         <activity
                 android:name=".ui.activity.articles.ArticlesActivity"
                 android:screenOrientation="portrait"/>

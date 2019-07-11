@@ -32,16 +32,6 @@ class ArticlesActivity : BaseActivity<ArticlesMvpPresenter>(), ArticlesMvpView {
         presenter?.getArticles()
     }
 
-    override fun showLoading() {
-        loadingView.visibility = View.VISIBLE
-        emptyView.visibility = View.GONE
-    }
-
-    override fun showEmpty() {
-        emptyView.visibility = View.VISIBLE
-        loadingView.visibility = View.GONE
-    }
-
     override fun showError(error: String) {
         emptyView.visibility = View.VISIBLE
         loadingView.visibility = View.GONE
@@ -54,18 +44,18 @@ class ArticlesActivity : BaseActivity<ArticlesMvpPresenter>(), ArticlesMvpView {
     }
 
     override fun showArticles(articles: List<ArticleWrapper>) {
-        loadingView.visibility = View.GONE
-        emptyView.visibility = View.GONE
-        articlesRecyclerView.layoutManager = LinearLayoutManager(this)
-        articlesRecyclerView.adapter = ArticlesRecyclerViewAdapter(articles) { articleWrapper, photoImageView, titleTextView, subtitleTextView ->
+        loadingView?.visibility = View.GONE
+        emptyView?.visibility = View.GONE
+        articlesRecyclerView?.layoutManager = LinearLayoutManager(this)
+        articlesRecyclerView?.adapter = ArticlesRecyclerViewAdapter(articles) { articleWrapper, photoImageView, titleTextView, subtitleTextView ->
             run {
                 val intent = Intent(this@ArticlesActivity, ArticleDetailsActivity::class.java)
                 intent.putExtra(getString(R.string.article_details_bundle), articleWrapper)
 
                 if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-                    val photoImageViewPair = Pair.create<View, String>(photoImageView, getString(R.string.transition_article_photo))
-                    val titleTextViewPair = Pair.create<View, String>(titleTextView, getString(R.string.transition_article_title))
-                    val subtitleTextViewPair = Pair.create<View, String>(subtitleTextView, getString(R.string.transition_article_subtitle))
+                    val photoImageViewPair = Pair<View, String>(photoImageView, getString(R.string.transition_article_photo))
+                    val titleTextViewPair = Pair<View, String>(titleTextView, getString(R.string.transition_article_title))
+                    val subtitleTextViewPair = Pair<View, String>(subtitleTextView, getString(R.string.transition_article_subtitle))
                     val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@ArticlesActivity, photoImageViewPair, titleTextViewPair, subtitleTextViewPair)
                     startActivity(intent, options.toBundle())
                 } else {
@@ -76,8 +66,8 @@ class ArticlesActivity : BaseActivity<ArticlesMvpPresenter>(), ArticlesMvpView {
     }
 
     private fun initLayout() {
-        titleToolbarTextView.text = getText(R.string.articles)
-        backImageView.setOnClickListener {
+        titleToolbarTextView?.text = getText(R.string.articles)
+        backImageView?.setOnClickListener {
             finish()
             overridePendingTransition(0, R.anim.anim_slide_down)
         }

@@ -13,7 +13,8 @@ import gr.mobile.mvp.kotlin.common.delegates.permission.PermissionDelegate
 import gr.mobile.mvp.kotlin.mvp.interactor.base.MvpInteractor
 import gr.mobile.mvp.kotlin.mvp.presenter.base.MvpPresenter
 import gr.mobile.mvp.kotlin.mvp.view.base.MvpView
-import kotlinx.android.synthetic.main.activity_list.*
+import kotlinx.android.synthetic.main.layout_empty.*
+import kotlinx.android.synthetic.main.layout_loading.*
 
 @SuppressLint("Registered")
 open class BaseActivity<T : MvpPresenter<MvpView, MvpInteractor>> : AppCompatActivity(), MvpView {

@@ -33,16 +33,16 @@ class ArticleDetailsActivity : BaseActivity<ArticleDetailsMvpPresenter>(), Artic
 
     @SuppressLint("SetTextI18n")
     private fun initLayout() {
-        backImageView.visibility = View.INVISIBLE
-        closeImageView.visibility = View.VISIBLE
-        closeImageView.setOnClickListener { onBackPressed() }
+        backImageView?.visibility = View.INVISIBLE
+        closeImageView?.visibility = View.VISIBLE
+        closeImageView?.setOnClickListener { onBackPressed() }
         Picasso.get().load(articleWrapper.article?.photo).into(photoImageView)
-        categoryTextView.text = articleWrapper.header + ": "
-        dateTextView.text = dateFormatted(articleWrapper.article?.timestamp?.times(1000), Definitions.ARTICLE_DETAILS_DATE)
-        titleTextView.text =articleWrapper.article?.title
+        categoryTextView?.text = articleWrapper.header + ": "
+        dateTextView?.text = dateFormatted(articleWrapper.article?.timestamp?.times(1000), Definitions.ARTICLE_DETAILS_DATE)
+        titleTextView?.text =articleWrapper.article?.title
         articleWrapper.article?.subtitle.isNullOrEmpty().let { if (it) subtitleTextView.visibility = View.GONE }
-        subtitleTextView.text = articleWrapper.article?.subtitle
-        contentTextView.text = Html.fromHtml(articleWrapper.article?.content).toString()
+        subtitleTextView?.text = articleWrapper.article?.subtitle
+        contentTextView?.text = Html.fromHtml(articleWrapper.article?.content).toString()
     }
 
     private fun getPassData() {
